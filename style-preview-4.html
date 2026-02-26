@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style 4 - Warm & Cozy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(160deg, #F5ECD7 0%, #EDD9B8 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lato', sans-serif;
+      padding: 20px;
+    }
+    .label {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(90,60,30,0.7);
+      color: #F5ECD7;
+      padding: 8px 20px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .card {
+      background: #FFFDF8;
+      border-radius: 20px;
+      padding: 48px 44px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 8px 40px rgba(140, 100, 50, 0.12);
+    }
+    .progress {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 36px;
+      align-items: center;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #E8D5B7;
+    }
+    .dot.done { background: #A0714F; }
+    .dot.active { background: #A0714F; width: 24px; border-radius: 4px; }
+    .step {
+      font-size: 12px;
+      font-weight: 700;
+      color: #A0714F;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: #3D2B1A;
+      margin-bottom: 32px;
+      line-height: 1.4;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .option {
+      border: 1.5px solid #E8D5B7;
+      border-radius: 12px;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 15px;
+      color: #5A3E28;
+      background: white;
+    }
+    .option:hover { border-color: #A0714F; background: #FDF6EC; }
+    .option.selected { border-color: #A0714F; background: #A0714F; color: white; }
+    .check {
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid currentColor;
+      border-radius: 4px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+    .option.selected .check::after { content: '✓'; }
+    .next-btn {
+      margin-top: 28px;
+      width: 100%;
+      padding: 16px;
+      background: #A0714F;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Lato', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background 0.15s;
+    }
+    .next-btn:hover { background: #8A5E3F; }
+  </style>
+</head>
+<body>
+  <div class="label">Style 4 — Warm & Cozy</div>
+  <div class="card">
+    <div class="progress">
+      <div class="dot done"></div>
+      <div class="dot done"></div>
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="step">Question 3 of 5</div>
+    <h2>It's Friday night. What are you most likely doing?</h2>
+    <div class="options">
+      <div class="option selected">
+        <div class="check"></div>
+        Out at a party — the more people, the better
+      </div>
+      <div class="option">
+        <div class="check"></div>
+        Movie marathon on the couch
+      </div>
+      <div class="option">
+        <div class="check"></div>
+        Working late — night is when I'm most productive
+      </div>
+      <div class="option">
+        <div class="check"></div>
+        Solo walk, podcast in, totally decompressing
+      </div>
+    </div>
+    <button class="next-btn">Next Question</button>
+  </div>
+</body>
+</html>

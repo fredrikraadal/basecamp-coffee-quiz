@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style 1 - Playful & Colorful</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(135deg, #FF6B6B 0%, #FFE66D 50%, #4ECDC4 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Nunito', sans-serif;
+      padding: 20px;
+    }
+    .label {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .card {
+      background: white;
+      border-radius: 32px;
+      padding: 48px 40px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 8px 8px 0px #FF6B6B, 16px 16px 0px #FFE66D;
+    }
+    .progress {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .dot {
+      height: 10px;
+      border-radius: 99px;
+      flex: 1;
+      background: #f0f0f0;
+    }
+    .dot.active { background: #FF6B6B; }
+    .dot.done { background: #4ECDC4; }
+    h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 15px;
+      color: #FF6B6B;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 28px;
+      color: #2D2D2D;
+      margin-bottom: 32px;
+      line-height: 1.3;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .option {
+      border: 3px solid #f0f0f0;
+      border-radius: 16px;
+      padding: 16px 20px;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #2D2D2D;
+    }
+    .option:hover { border-color: #FF6B6B; background: #FFF5F5; transform: translateY(-2px); }
+    .option.selected { border-color: #FF6B6B; background: #FF6B6B; color: white; }
+    .emoji { font-size: 22px; }
+    .next-btn {
+      margin-top: 28px;
+      width: 100%;
+      padding: 16px;
+      background: #FF6B6B;
+      color: white;
+      border: none;
+      border-radius: 16px;
+      font-family: 'Fredoka One', cursive;
+      font-size: 20px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 0 #cc4444;
+      transition: all 0.1s;
+    }
+    .next-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 0 #cc4444; }
+  </style>
+</head>
+<body>
+  <div class="label">Style 1 — Playful & Colorful</div>
+  <div class="card">
+    <div class="progress">
+      <div class="dot done"></div>
+      <div class="dot done"></div>
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <h1>Question 3 of 5</h1>
+    <h2>It's Friday night. What are you most likely doing?</h2>
+    <div class="options">
+      <div class="option selected">
+        <span class="emoji">🎉</span>
+        Out at a party — the more people, the better
+      </div>
+      <div class="option">
+        <span class="emoji">🎬</span>
+        Movie marathon on the couch
+      </div>
+      <div class="option">
+        <span class="emoji">🌙</span>
+        Working late — night is when I'm most productive
+      </div>
+      <div class="option">
+        <span class="emoji">🧘</span>
+        Solo walk, podcast in, totally decompressing
+      </div>
+    </div>
+    <button class="next-btn">Next →</button>
+  </div>
+</body>
+</html>

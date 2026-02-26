@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style 2 - Minimal & Clean</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #F8F8F6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+    }
+    .label {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .card {
+      background: white;
+      border-radius: 4px;
+      padding: 56px 48px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .progress-bar {
+      height: 2px;
+      background: #EFEFEF;
+      margin-bottom: 48px;
+      border-radius: 2px;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 60%;
+      background: #1A1A1A;
+      border-radius: 2px;
+    }
+    .step {
+      font-size: 11px;
+      font-weight: 500;
+      color: #AAAAAA;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 500;
+      color: #1A1A1A;
+      margin-bottom: 36px;
+      line-height: 1.4;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .option {
+      border: 1px solid #EFEFEF;
+      padding: 16px 20px;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 15px;
+      color: #333;
+      border-radius: 2px;
+    }
+    .option:hover { border-color: #1A1A1A; background: #FAFAFA; }
+    .option.selected { border-color: #1A1A1A; background: #1A1A1A; color: white; }
+    .radio {
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid currentColor;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .option.selected .radio::after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+    }
+    .next-btn {
+      margin-top: 36px;
+      padding: 14px 32px;
+      background: #1A1A1A;
+      color: white;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      border-radius: 2px;
+      transition: opacity 0.15s;
+    }
+    .next-btn:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <div class="label">Style 2 — Minimal & Clean</div>
+  <div class="card">
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+    <div class="step">Question 3 of 5</div>
+    <h2>It's Friday night. What are you most likely doing?</h2>
+    <div class="options">
+      <div class="option selected">
+        <div class="radio"></div>
+        Out at a party — the more people, the better
+      </div>
+      <div class="option">
+        <div class="radio"></div>
+        Movie marathon on the couch
+      </div>
+      <div class="option">
+        <div class="radio"></div>
+        Working late — night is when I'm most productive
+      </div>
+      <div class="option">
+        <div class="radio"></div>
+        Solo walk, podcast in, totally decompressing
+      </div>
+    </div>
+    <button class="next-btn">Continue</button>
+  </div>
+</body>
+</html>

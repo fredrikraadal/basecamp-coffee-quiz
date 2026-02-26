@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style 3 - Bold & Dramatic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0A0A0A;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      padding: 20px;
+    }
+    .label {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,0.15);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .card {
+      max-width: 560px;
+      width: 100%;
+    }
+    .progress {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 48px;
+    }
+    .seg {
+      height: 3px;
+      flex: 1;
+      background: #2A2A2A;
+      border-radius: 2px;
+    }
+    .seg.done { background: #E8FF47; }
+    .seg.active { background: #E8FF47; opacity: 0.5; }
+    .step {
+      font-size: 12px;
+      font-weight: 500;
+      color: #666;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 48px;
+      color: white;
+      margin-bottom: 40px;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .option {
+      border: 1px solid #2A2A2A;
+      padding: 18px 24px;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 15px;
+      color: #999;
+      border-radius: 4px;
+    }
+    .option:hover { border-color: #E8FF47; color: white; }
+    .option.selected { border-color: #E8FF47; background: #E8FF47; color: #0A0A0A; font-weight: 600; }
+    .arrow { font-size: 18px; opacity: 0.4; }
+    .option.selected .arrow { opacity: 1; }
+    .next-btn {
+      margin-top: 32px;
+      width: 100%;
+      padding: 18px;
+      background: #E8FF47;
+      color: #0A0A0A;
+      border: none;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 22px;
+      cursor: pointer;
+      letter-spacing: 2px;
+      border-radius: 4px;
+      transition: opacity 0.15s;
+    }
+    .next-btn:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div class="label">Style 3 — Bold & Dramatic</div>
+  <div class="card">
+    <div class="progress">
+      <div class="seg done"></div>
+      <div class="seg done"></div>
+      <div class="seg active"></div>
+      <div class="seg"></div>
+      <div class="seg"></div>
+    </div>
+    <div class="step">Question 3 of 5</div>
+    <h2>It's Friday night. What are you most likely doing?</h2>
+    <div class="options">
+      <div class="option selected">
+        Out at a party — the more people, the better
+        <span class="arrow">→</span>
+      </div>
+      <div class="option">
+        Movie marathon on the couch
+        <span class="arrow">→</span>
+      </div>
+      <div class="option">
+        Working late — night is when I'm most productive
+        <span class="arrow">→</span>
+      </div>
+      <div class="option">
+        Solo walk, podcast in, totally decompressing
+        <span class="arrow">→</span>
+      </div>
+    </div>
+    <button class="next-btn">Next Question →</button>
+  </div>
+</body>
+</html>
